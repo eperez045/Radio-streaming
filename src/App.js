@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import "./App.css";
-import NavBar from "./components/NavBar";
+// import NavBar from "./components/NavBar";
 
 function App() {
   const [list, setList] = useState([]);

@@ -18,6 +18,7 @@ body {
   border: 2px solid black;
   color: black;
   font-family: 'Space Mono', monospace;
+  outline: none;
 }
 ::placeholder { color: black; font-family: 'Space Mono', monospace;}
 .search-button{
