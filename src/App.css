@@ -28,6 +28,7 @@ body {
   border: 2px solid black;
   width: 10%;
   font-family: 'Space Mono', monospace;
+  outline: none;
 }
 .stationList{
   width: 100%;
@@ -43,9 +44,11 @@ body {
   background-image: radial-gradient(#000 20%, transparent 20%), radial-gradient(#000 20%, transparent 20%);
   background-position: 0 0, 0.5rem 0.5rem;
   background-size: 1rem 1rem;
+  box-shadow: 5px 10px
 }
 .card:hover{
-  box-shadow: 5px 10px
+  box-shadow: 10px 15px;
+  scale: 1.05;
 }
 .text-station{
   text-align: center;
