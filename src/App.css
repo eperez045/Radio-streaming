@@ -1,53 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 body {
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+  background-color: #FFED50;
 	height: 100vh;
+  font-family: 'Space Mono', monospace;
 }
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+.search-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2em;
+  
 }
-
+.search-bar{
+  padding: 0.5rem;
+  width: 40%;
+  background-color: #FCFCFC;
+  border: 2px solid black;
+  color: black;
+  font-family: 'Space Mono', monospace;
+}
+::placeholder { color: black; font-family: 'Space Mono', monospace;}
+.search-button{
+  padding: 0.5rem;
+  background-color: black;
+  color: #FCFCFC;
+  border: 2px solid black;
+  width: 10%;
+  font-family: 'Space Mono', monospace;
+}
 .stationList{
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 1em;
+  grid-template-columns: 1fr 1fr 1fr;
+  
 }
 .card{
-  width: 85%;
-  background-color: ghostwhite;
-  border: 1px solid brown;
-  border-radius: 1em;
+  margin: 3em;
+  background-color: #FCC5DC;
+  border: 2px solid black;
   margin-bottom: 1em;
+  background-image: radial-gradient(#000 20%, transparent 20%), radial-gradient(#000 20%, transparent 20%);
+  background-position: 0 0, 0.5rem 0.5rem;
+  background-size: 1rem 1rem;
 }
-.textStation{
+.card:hover{
+  box-shadow: 5px 10px
+}
+.text-station{
   text-align: center;
+  background-color: #000;
+  color: #FCFCFC;
+  border: 2px solid black;
+  border-left-style: none;
+  padding: 0.2rem;
+  width: 65%;
 }
 .audio-box{
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .audio{
   transform: scale(0.75);
 }
 audio::-webkit-media-controls-panel {
-  background-color: #56AEFF;
+  background: #FCFCFC;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 600px){
+  .stationList{
+    grid-template-columns: 1fr;
   }
-  to {
-    transform: rotate(360deg);
+  .card{
+    margin: 2em;
+    background-image: none;
+    background-position: none;
+    background-size: none;
+  }
+  .search-bar{
+    width: 70%;
+  }
+  .search-button{
+    width: 20%;
   }
 }
+

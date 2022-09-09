@@ -23,27 +23,32 @@ function App() {
   return (
     <div className="App">
       {/* <NavBar /> */}
-      <h1>Radio Factoria!</h1>
+      <section className="search-section">
       <input
         type="text"
-        placeholder="Busca la radio"
+        placeholder="Escribe aquí la emisora..."
+        className="search-bar"
         value={search}
         onChange={handleChange}
       />
-      <button name="search" onClick={getStations}>
+      <button name="search" onClick={getStations} className="search-button">
         Buscar
       </button>
+      </section>
+      
       <div className="stationList">
+        
         {list.map((station, i) => (
           <div className="card" key={i}>
-            <p className="textStation">{station.name}</p>
+            <p className="text-station">{station.name}</p>
             <div className="audio-box">
-              <audio controls className="audio">
+              <audio controls className="audio" style={{border: "solid 3px black", background: "#FCFCFC"}}>
                 <source src={station.url} type="audio/mpeg"></source>
               </audio>
             </div>
           </div>
         ))}
+        
       </div>
     </div>
   );
