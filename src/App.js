@@ -25,6 +25,7 @@ function App() {
       {/* <NavBar /> */}
       <section className="search-section">
       <input
+        role="search"
         type="text"
         placeholder="Escribe aquí la emisora..."
         className="search-bar"
